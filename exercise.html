@@ -1,21 +1,90 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
+<html lang="vi_VN" >
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox – Hàng ngang</title>
 
-
-        <style>
-            .box{  
+    <style>
+            /* .box{  
                 width:100%;
                 height: 400px;
                 background-image: linear-gradient(90deg, red 30%, Yellow 30% , blue 50% )  ;
+            } */
+            .container {
+      display: flex;
+      justify-content:space-between;
+      align-items:center;
+      height: 300px;
+      border: 2px solid #444;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
 
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
 
+    /* Box cao hơn để quan sát ảnh hưởng */
+    .taller {
+      height: 150px;
+      line-height: 150px;
+      background-color: #f44336;
+    }
 
-            }
-        </style >
-      </head>
-      <div class="box"></div>
+    /* Khi đổi sang dọc */
+    .column-layout {
+      flex-direction: column;
+    }
+    </style >
+</head>
+
+<body>    
+     <h2>Xếp 3 box ngang hàng, cách đều nhau</h2>
+  <div class="container" id="row">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <h2>Xếp dọc và căn giữa</h2>
+  <div class="container column-layout">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <h2>Thêm 1 box cao hơn – Quan sát thay đổi</h2>
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box taller">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+  
+    <div class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"> Giới thiệu </li>
+            <li class="nav-item"> Kết nối  </li>
+            <li class="nav-item"> Tải ứng dụng </li>
+        </ul>
+        <ul class="nav-list">
+            <li class="nav-item"> Đăng ký </li>
+            <li class="nav-item"> Đăng nhập </li>
+        </ul>
+    </div>
+
+    <div>
+        <form>
+            <label> hahaa</label>
+        </form>
+    </div>
 <h1>Giới thiệu bản thân </h1>
 <h2> Họ và Tên: Trần Viết Tường </h2> 
 <h2> Tuổi: 19 tuổi</h2>
@@ -126,15 +195,6 @@
         <textarea id="note" name="note" rows="4" cols="50" placeholder="Nhập ghi chú"></textarea><br>
     <button type="submit">Gửi</button>    
 </form>
-
-
-
-
-
-
-<ul>
-    <li>Red</li>
-    <li>Yellow</li>
-    </ul>
-
+</body>
+</html>
 
